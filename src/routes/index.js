@@ -15,5 +15,25 @@ router.get('/json', async (ctx, next) => {
     title: 'koa2 json'
   }
 })
+router.get('/profile/:userName', async (ctx, next) => {
+  const {
+    userName
+  } = ctx.params
+  ctx.body = {
+    title: 'this is profile page',
+    userName
+  }
+})
+router.get('/loadMore/:userName/:pageIndex', async (ctx, next) => {
+  const {
+    userName,
+    pageIndex
+  } = ctx.params
+  ctx.body = {
+    title: 'this is profile page',
+    userName,
+    pageIndex
+  }
+})
 
 module.exports = router
