@@ -9,6 +9,17 @@
 <body>
   <h1><%= title %></h1>
   <p>EJS Welcome to <%= title %></p>
+  <p><%= msg  %> </p>
+  <!-- 没有name变量的时候为了防止报错，可以用下面的写法 locals -->
+  <p><%= locals.name  %> </p>
+  <!-- 条件语句的写法 -->
+  <%- include('widgets/user-info',{
+   isMe
+ })%>
+  <hr>
+  <%- include('widgets/blog-list',{
+  blogList
+})%>
 </body>
 
 </html>
