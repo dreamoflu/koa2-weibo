@@ -14,3 +14,12 @@
   > 1.更新限制和删除级联
   > 2.连表查询
   >
+
+  ### 使用redis
+
+ > Mac 下载 brew install redis
+ > 启动 redis-server, redis-cli 连接
+
+ >设置值 set name 'liyajun'
+> 取值  get name
+> 查看所有的值 keys *
