@@ -23,3 +23,6 @@
  >设置值 set name 'liyajun'
 > 取值  get name
 > 查看所有的值 keys *
+
+### node 操作redis 具体使用在conf db.js中
+> 下载redis npm install redis -D
