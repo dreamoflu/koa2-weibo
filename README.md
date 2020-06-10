@@ -51,9 +51,16 @@
 > npm i eslint babel-eslint --save-dev
 > package.json 配置  "lint": "eslint --ext .js ./src"
   pre-commit
-> 1.在代码 git commit之前必须执行的操作 例如必须 eslint 校验通过
+> 在代码 git commit之前必须执行的操作 例如必须 eslint 校验通过
+> cnpm install pre-commit --save-dev
 >2.在package.json 中配置
 2. inspect 调试
+> 使用chrome 浏览器调试node程序
+> node 本身支持不用下载插件 
+> 1.修改package.json中的dev命令
+>  "dev": "cross-env NODE_ENV=dev ./node_modules/.bin/nodemon --inspect=9229 bin/www"
+> // inspect 默认端口 9229
+> 2. 运行 npm run dev 之后 在chrome浏览的地址栏中输入 chrome://inspect 回车之后点击页面中的inspect
 3. 404页和错误页
 
 ### node 连接mysql的配置
