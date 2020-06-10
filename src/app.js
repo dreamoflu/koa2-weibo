@@ -6,6 +6,13 @@ const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
 
+const session = require('koa-generic-session')
+const redisStore = require('koa-redis')
+const {
+  REDIS_CONF
+} = require('./conf/db')
+
+
 const index = require('./routes/index')
 const users = require('./routes/users')
 
@@ -22,6 +29,22 @@ app.use(require('koa-static')(__dirname + '/public')) // 将public注册为静�
 app.use(views(__dirname + '/views', {
   extension: 'ejs'
 })) // 注册node 字符串模版文件
+
+// session 配置
+app.keys = ['UIsdf_7878#$'] // 加密 密匙
+app.use(session({
+  key: 'weibo_sid', // cookie name 默认是 'koa_sid'
+  perfix: 'weibo:sess', // redis key 的前缀 默认是 'koa:sess：' 
+  cookie: {
+    path: '/', // cookie 路径 
+    httpOnly: true, // 不允许客户端修改cookie
+    maxAge: 24 * 60 * 60 * 1000 // cookie 过期时间
+  },
+  // ttl: 24 * 60 * 60 * 1000, // redis 过期时间 默认的配置是和cookie的过期时间一致
+  store: redisStore({
+    all: `${REDIS_CONF.host}:${REDIS_CONF.port}`
+  })
+}))
 
 // logger  中间件演示
 // app.use(async (ctx, next) => {

@@ -24,5 +24,15 @@
 > 取值  get name
 > 查看所有的值 keys *
 
-### node 操作redis 具体使用在conf db.js中
+
+### node 操作redis 具体使用在 _redis.js中
 > 下载redis npm install redis -D
+
+### koa2中使用radis 和配置session 
+1.npm i koa-redis koa-generic-session --save
+2. app.js 中来配置
+
+### 单元测试 jest的使用
+1. *.test.js 文件
+2. 常用的断言
+3. 测试http接口
