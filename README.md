@@ -41,3 +41,21 @@
 
 ###  jest 测试http请求
  1. npm install supertest --save-dev
+ 2. 实例在 test 文件中
+
+
+ ### 完善开发环境
+1. 配置esline,以及pre-commit
+  eslint
+> 根目录下新建文件 .eslintrc.json (eslint 配置文件) .eslintignore (配置那些文件忽略eslint校验)
+> npm i eslint babel-eslint --save-dev
+> package.json 配置  "lint": "eslint --ext .js ./src"
+  pre-commit
+> 1.在代码 git commit之前必须执行的操作 例如必须 eslint 校验通过
+>2.在package.json 中配置
+2. inspect 调试
+3. 404页和错误页
+
+### node 连接mysql的配置
+1. npm install sequelize mysql2 --save
+2. 配置文件在 src/db 路径下
