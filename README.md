@@ -33,6 +33,11 @@
 2. app.js 中来配置
 
 ### 单元测试 jest的使用
-1. *.test.js 文件
-2. 常用的断言
-3. 测试http接口
+>1. *.test.js 文件
+>2. 常用的断言
+>3. 测试http接口
+1. npm install jest --save-dev
+2. package.json 中配置启动命令  "test": "cross-env NODE_ENV=dev jset --runInBand --forceExit --colors"
+
+###  jest 测试http请求
+ 1. npm install supertest --save-dev
