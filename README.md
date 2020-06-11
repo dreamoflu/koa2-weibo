@@ -66,3 +66,15 @@
 ### node 连接mysql的配置
 1. npm install sequelize mysql2 --save
 2. 配置文件在 src/db 路径下
+
+
+### jwt 加密用户信息（具体演示在jwt-test中）
+>jwt -- json web token
+>用户认证成功后，server端返回一个加密的token给客户端
+>客户端后续每次请求都带token,以示当前的用户身份
+>.演示方法 在routes/users.js 中
+> 使用过程
+> 1.安装依赖  npm install koa-jwt --save
+> 2.app.js 中引用和配置
+> 3.加密工具 npm install jsonwebtoken --save (使用方法在user.js 中)
+
