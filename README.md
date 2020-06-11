@@ -68,7 +68,7 @@
 2. 配置文件在 src/db 路径下
 
 
-### jwt 加密用户信息（具体演示在jwt-test中）
+### jwt 加密用户信息（具体演示在jwt-test中） 本项目中不使用此技术，使用的是session 只做技术了解 
 >jwt -- json web token
 >用户认证成功后，server端返回一个加密的token给客户端
 >客户端后续每次请求都带token,以示当前的用户身份
